@@ -2,23 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <style>table{font-family: arial, sans-serif;
-        border-collapse: collapse;
-        width: 100%;}</style>
-    <style>td, th {
-        border: 1px solid #dddddd;
-        text-align: left;
-        padding: 8px;
-    }
+    <title>Table simple</title>
+    <style>
+        table {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th,td {
+            border: 1px solid;
+            text-align: left;
+            padding: 9px;
+        }
+        tr:nth-child() {background-color: darkblue}
     </style>
-    <style>tr:nth-child() {
-    background-color: #3150ff;
-    }
-    </style>
+
 </head>
 <body>
-<table
+<table>
     <tr>
         <th>Company</th>
         <th>Contact</th>
@@ -53,7 +54,6 @@
         <td>Magazzini Alimentari Riuniti</td>
         <td>Giovanni Rovelli</td>
         <td>Italy</td>
-    </tr>
 </table>
 
 </body>
