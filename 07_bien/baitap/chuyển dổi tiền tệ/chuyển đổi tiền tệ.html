@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Chuyển đổi tiền tệ</h3>
+<table>
+    <tr>
+        <th>Amount<br>
+            <label>
+                <input type="text" name="amount"  id="amuont">
+            </label>
+        </th>
+        <th>From Currency <br>
+            <label>
+                <select id="from">
+                <option value="VND">Việt Nam</option>
+                <option value="USD">Mỹ</option>
+            </select>
+            </label>
+        </th>
+        <th>To Curency <br>
+            <label>
+                <select id="to">
+                    <option value="USD">USD</option>
+                    <option value="VND">VND</option>
+                </select>
+            </label>
+        <th id="result">Kết Quả <br>
+        <lable><input type="text"></lable>
+        </th>
+       <th><br><label><button onclick="convert()">thanh tiền</button></label></th>
+
+    </tr>
+
+</table>
+<script src="money.js" ></script>
+</body>
+</html>

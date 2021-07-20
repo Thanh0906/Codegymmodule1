@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<from>
+    <ul>
+        <li><a href="https://www.google.com/" class="show">Tin học</a> </li>
+        <li><a href="https://www.google.com/">Văn học</a></li>
+        <li><a href="https://www.google.com/" class="show">Toán học</a></li>
+    </ul>
+</from>
+</body>
+<script>
+    var a_list = document.getElementById("show");
+    for (var i = 0 ;i< a_list.length; i++){
+      a_list[i].onclick = function ()
+      {
+          alert('xin chào các ban');
+        return false
+
+        }
+    }
+</script>
+</html>
