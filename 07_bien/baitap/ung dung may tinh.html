@@ -8,50 +8,26 @@
 <h1>Ứng Dụng Máy Tính</h1>
 <from >
     <label>
-        <input type="text" value="12" id="input1">
+        <input type="number"  id="inputA">
     </label>
     <label>
-             <input type="text" value="12" id="input2">
+             <input type="number" id="inputB">
     </label>
     <br>
     <lable>
-        <button onclick="calculator('+')">addition(+)</button>
+        <button onclick="add('+')">addition(+)</button>
     </lable>
     <lable>
-        <button onclick=" calculator('-')"> Subtraction(-)</button>
+        <button onclick="sub('-')"> Subtraction(-)</button>
     </lable>
     <lable>
-        <button onclick=" calculator ('*')"> Multipcation(X)</button>
+        <button onclick="add('*')"> Multipcation(*)</button>
     </lable>
     <lable>
-        <button onclick=" calculator('/')"> Division(/)</button>
+        <button onclick="add('/')"> Division(/)</button>
     </lable>
-    <button onclick="calulator1" id="result">result</button>
-
+     <button id="result">result</button>
 </from>
-<script>
-  function calulator1(value) {
-        let A =document.getElementById("inpit1").value;
-        let B =document.getElementById("input2").value;
-        aa = parseInt(A);
-        bb =parseInt(B);
-        if (value == "+"){
-            let c = aa + bb;
-            document.getElementById("result").innerText= c;
-        } else if (value == "-"){
-            let c = aa-bb;
-            document.getElementById("result").innerText = c;
-        }else if (value == "*") {
-            let c= aa * bb;
-            document.getElementById("result").innerText = aa * bb;
-        } else if ( value != "/") {
-            let c = A / B;
-            document.getElementById("result").innerText = c;
-        }
-  }
-
-
-
-</script>
+<script src="mt.js"></script>
 </body>
 </html>
