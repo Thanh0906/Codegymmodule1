@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<label>
+    <input type="checkbox" id="g" onclick="god()" style="height:30px">
+</label>
+    <p>Good</p>
+<br/>
+<label >
+    <input type="checkbox" id="c" onclick="chp()">
+</label>
+        <p>Cheap</p>
+<br />
+<label>
+    <input type="checkbox" id="f" onclick="fat()">
+</label>
+        <p>Fast</p>
+
+</body>
+<script>
+    let good = document.getElementById('g');
+    let chep = document.getElementById('c');
+    let fast =document.getElementById('f');
+    console.log(good,chep,fast);
+    function god() {
+        if (chep && fast) {
+            if (Math.random() < 0.5) {
+                document.getElementById("c").checked = false;
+            } else {
+                document.getElementById("f").checked = false;
+            }
+        }
+        }
+    function chp() {
+        if (good && fast) {
+            if (Math.random() < 0.5) {
+                document.getElementById("g").checked = false;
+            } else {
+                document.getElementById("f").checked = false;
+            }
+        }
+    }
+    function fat() {
+           if (good && chep) {
+            if (Math.random() < 0.5) {
+                document.getElementById("c").checked = false;
+            } else {
+                document.getElementById("f").checked = false;
+            }
+        }
+    }
+</script>
+</html>

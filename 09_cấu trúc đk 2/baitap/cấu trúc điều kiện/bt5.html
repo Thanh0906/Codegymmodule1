@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài tập 5</title>
+</head>
+<body>
+<script>
+    let a = parseInt(prompt("nhập điểm kiểm tra"));
+    let b = parseInt(prompt("nhập điểm kiểm tra giữa kì"));
+    let c = parseInt(prompt("nhập điểm kiểm tra cuối kì"));
+    let d = (c +b*2 +c*3)/6;
+    if ( d>8){
+        alert("chúc mừng bạn đã đạt thành tích học sinh Giỏi")
+    } else if (d>6.5){
+        alert("Chúc mừng bạn đã đạt được thành tích học sinh Khá")
+    }else if (d>5){
+        alert("chúc mừng bạn đã đạt thành tích học sinh Trung bình Mong bạn sẽ cái thiện việc học trong năm học mới")
+    } else {
+        alert("bạn đã được thành tích Yếu Mong bạn sẽ cái thiện việc học trong năm học mới")
+    }
+</script>
+</body>
+</html>

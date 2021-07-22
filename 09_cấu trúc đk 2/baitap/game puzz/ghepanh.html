@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img src="hinh1a.png" id="h1" onclick="onechange(1)" width="100 px" height="400 px" alt="">
+<img src="hinh2b.png" id="h2" onclick="onechange(2)" width="100 px" height="400 px" alt="">
+<img src="hinh3c.png" id="h3" onclick="onechange(3)" width="100 px" height="400 px" alt="">
+<img src="hinh1d.png" id="h4" onclick="onechange(4)" width="100 px" height="400 px" alt="">
+<img src="hinh1e.png" id="h5" onclick="onechange(5)"  width="100 px" height="400 px" alt="">
+</body>
+<script>
+    imgA = document.getElementById('h1');
+    imgB = document.getElementById('h2');
+    imgC = document.getElementById('h3');
+    imgD = document.getElementById('h4');
+    imgE = document.getElementById('h5');
+    function onechange(check) {
+        switch (check) {
+            case 1 : {
+                if (imgA.getAttribute('src') === "hinh1a.png") {
+                    imgA.src = "hinh2a.png";
+                } else if (imgA.getAttribute('src') === "hinh2a.png") {
+                    imgA.src = "hinh3a.png"
+                } else if (imgA.getAttribute('src') === "hinh3a.png") {
+                    imgA.src = "hinh1a.png";
+                }
+                checkImage();
+                break;
+            }
+            case 2 : {
+                if (imgB.getAttribute('src') === "hinh1b.png"){
+                    imgB.src= "hinh2b.png";
+                } else if (imgB.getAttribute('src') === "hinh2b.png"){
+                    imgB.src = "hinh3b.png"
+                }else  if (imgB.getAttribute('src') === "hinh3b.png"){
+                    imgB.src= "hinh1b.png";
+                }
+                checkImage();
+                break;
+            }
+            case 3 : {
+                if (imgC.getAttribute('src') === "hinh1c.png"){
+                    imgC.src= "hinh2c.png";
+                } else if (imgC.getAttribute('src') === "hinh2c.png"){
+                    imgC.src = "hinh3c.png"
+                }else  if (imgC.getAttribute('src') === "hinh3c.png"){
+                    imgC.src= "hinh1c.png";
+                }
+                checkImage();
+                break;
+            }
+            case  4 : {
+                if (imgD.getAttribute('src') === "hinh1d.png"){
+                     imgD.src= "hinh2d.png";
+                } else if (imgD.getAttribute('src') === "hinh2d.png"){
+                   imgD.src = "hinh3d.png"
+                }else  if (imgD.getAttribute('src') === "hinh3d.png"){
+                   imgD.src= "hinh1d.png";
+
+                }
+                checkImage();
+                break;
+              }
+            case 5 : {
+                if (imgE.getAttribute('src') === "hinh1e.png"){
+                    imgE.src= "hinh2e.png";
+                } else if (imgE.getAttribute('src') === "hinh2e.png"){
+                    imgE.src = "hinh3e.png"
+                }else  if (imgE.getAttribute('src') === "hinh3e.png"){
+                    imgE.src= "hinh1e.png";
+              }
+                checkImage();
+                break;
+            }
+
+    }
+    function checkImage() {
+        if (imgA.getAttribute("src") === "Images/Hinh1a.png" &&
+            imgB.getAttribute("src") === "Images/Hinh1b.png" &&
+            imgC.getAttribute("src") === "Images/Hinh1c.png" &&
+            imgD.getAttribute("src") === "Images/Hinh1d.png" &&
+            imgE.getAttribute("src") === "Images/Hinh1e.png") {
+            alert(" Hình A")
+        } else if (
+            imgA.getAttribute("src") === "Images/Hinh2a.png" &&
+            imgB.getAttribute("src") === "Images/Hinh2b.png" &&
+            imgC.getAttribute("src") === "Images/Hinh2c.png" &&
+            imgD.getAttribute("src") === "Images/Hinh2d.png" &&
+            imgE.getAttribute("src") === "Images/Hinh2e.png") {
+            alert(" Hình B")
+        }}
+    }
+
+
+</script>
+</html>
