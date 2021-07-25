@@ -6,7 +6,20 @@
 </head>
 <body>
 <script>
-
+    let a = parseInt(prompt("Hãy nhập đó a "));
+    let b = parseInt(prompt("hãy nhập số b"));
+    let c = parseInt(prompt("Hãy nhập số mà bạn muốn đoán .bạn còn 3 lần cơ hội"));
+    let soRamdom = Math.floor(Math.random()*(b-a)+a);
+    for (let i=0;i<2;i++) {
+        if (soRamdom === c) {
+            alert("Bạn đã đoán đung");
+            break;
+        } else {
+                alert("Bạn đã đoán sai! Hãy thử lại ");
+                c = parseInt(prompt("hãy nhập đố mà ban muốn đoán.Bạn còn" + (2 - i) + "lần đoán"))
+            }
+            alert("Bạn đã hết lượt")
+    }
 </script>
 
 </body>
