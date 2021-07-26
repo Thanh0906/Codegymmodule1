@@ -8,26 +8,22 @@
 <script>
     function check(n) {
         if (n < 2){
-            return false;
         }
-        else if (n == 2){
-            return true;
+        else if (n === 2){
+
         }
-        else if (n % 2 == 0){
-            return false;
+        else if (n % 2 === 0){
         }
         else {
             for (var i = 3; i < Math.sqrt(n); i+=2)
             {
-                if (n % i == 0){
-                    return false;
+                if (n % i === 0){
                     break;
                 }
             }
         }
-        return true
     }
-    var n = prompt("Nhập số nguyên tố đầu tiên bạn muốn in ra",'');
+    var n = prompt("Nhập số lượng sô nguyên tố  bạn muốn in ra");
     var count = 0;
     var number = 2;
     var result = "";

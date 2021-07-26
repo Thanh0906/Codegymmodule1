@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let height =8 ;
+    function printUpHeart() {
+        for (let i = 0; i < height; i++) {
+            for (let j = height - i; j > 0; j--) {
+                document.write("&nbsp&nbsp")
+            }
+            for (let m = 1; m <= i * 2 + 1; m++) {
+                document.write("*");
+            }
+            for (let n = height - i; n > 0; n--) {
+                document.write("&nbsp&nbsp&nbsp&nbsp")
+            }
+            for (let k = 1; k <= i * 2 + 1; k++) {
+                document.write("*");
+            }
+            document.write("<br>")
+        }
+    }
+    function printDownHeart() {
+      for (let i = 0; i < height * 2; i++) {
+          for (let j = 0; j <= i; j++) {
+                document.write("&nbsp&nbsp")
+          }
+            for (let m = height * 4 - i * 2 + 1; m > 1; m--) {
+                document.write("*");
+            }
+            document.write("<br>")
+        }
+    }
+    printUpHeart();
+    printDownHeart()
+</script>
+</html>
