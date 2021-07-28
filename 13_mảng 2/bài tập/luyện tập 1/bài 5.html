@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dếm số nguyên âm</title>
+</head>
+<body>
+<script>
+
+  let mangso = [];
+  let mangsoam = [];
+  for (let i = 0; i < 5; i++) {
+      mangso[i] = Number(prompt("Nhập phần tử  vào mảng tại vị trí"+i));
+      if (mangso[i]<0){
+          mangsoam.push(mangso[i])
+      }
+  }
+  document.write(" mảng số là:["+mangso+"]<br>");
+  document.write("số nguyên âm trong mảng là: "+ mangsoam.length +"")
+
+
+
+</script>
+</body>
+</html>

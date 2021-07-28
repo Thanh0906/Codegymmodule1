@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array = new Array(prompt("Nhập vào một chuỗi"));
+    let arrayFix = [];
+
+    document.write(" ["+array+"]<br>");
+    for (let i=0; i<array.length ; i++){
+        for (let j=0; j<array[i].length; j++){
+            if(array[i][j] === "-"){
+                array[i][j] = "_";
+                arrayFix.push("_")
+            }else{
+                arrayFix.push(array[i][j])
+            }
+
+        }
+    }
+    document.write("["+arrayFix.join("")+"]<br>")
+</script>
+</body>
+</html>

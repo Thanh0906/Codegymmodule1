@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let mang = [];
+    let check = true;
+    let v =parseInt(prompt("nhập số cầm tìm"));
+    for (let i = 0; i < 5; i++) {
+        mang[i] = parseInt(prompt("Nhập phần tử vào mảng tại vị trí"+i));
+        if (mang[i] === v) {
+            check = true;
+        }
+    }
+    if (check===true){
+        document.write(+v + " is in the array")
+    }else {
+        document.write(+v + " is not in the array")
+    }
+</script>
+</body>
+</html>

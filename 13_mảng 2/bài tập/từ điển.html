@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label ><input type="text" id="en" value=""></label>
+<input type="button" value="Dịch" onclick="dich()">
+<br><br>
+<p id="VN"></p>
+<script>
+
+  let input = document.getElementById("en");
+  let EN = ["Vietnam", "fighting", "win", "champion", "I", "is", "vietnamese"];
+  let VI= ["Việt Nam", "cố lên", "chiến thắng", "vô địch", "tôi", "là", "người viêt nam"];
+  document.write("Chỉ có thể dịch được các từ ["+EN.join(" ")+"]");
+  let dem =false;
+  function dich() {
+      for (let i=0; i<EN.length; i++) {
+          if (EN[i] === input.value) {
+              dem=true;
+              document.getElementById("VN").innerHTML = VI[i];
+              break}
+          }
+  }if(dem){
+      alert("Không có dữ liệu")}
+</script>
+</body>
+</html>

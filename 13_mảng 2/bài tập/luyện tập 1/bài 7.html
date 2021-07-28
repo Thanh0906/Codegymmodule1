@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+ //   let n =parseInt(prompt("nhâp độ dài"));
+    let arr = [];
+    for (let i = 0; i < 10; i++) {
+        arr[i] = parseInt(prompt("Nhập giá trị vào phần tử : " + i));
+    }
+    let v = parseInt(prompt("Nhập số nguyên V: "));
+
+    for (let i = 0; i < arr.length; i++){
+        if (arr[i] === v){
+            for (let j = i; j < arr.length; j++){
+                arr[j] = arr[j + 1]
+            }
+        }
+    }
+    document.write(" ["+arr+"]");
+</script>
+</body>
+</html>

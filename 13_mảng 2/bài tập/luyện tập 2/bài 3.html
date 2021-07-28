@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array = [4,8,hello,baby,8,blu,red,78];
+    let dem = 0;
+    //for (let i=0;i<8;i++){
+    //    array[i]=parseInt(prompt("nhập phần tử của mảng"));
+    //}
+   // document.write("mảng ["+array+"] <br>");
+    for (let i=0; i<array.length; i++){
+        if (array[i] %2 === 0 ||array[i] %2 === 1){
+            dem ++
+        }
+    }
+    document.write("Các ký tự số trong mảng là "+dem+" số<br>")
+</script>
+</body>
+</html>
