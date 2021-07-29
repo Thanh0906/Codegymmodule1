@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" value="Bài 1" onclick="bai1()"> Tính bình phương <br>
+<script>
+
+  function binhphuong(a) {
+      let ketqua = a * a;
+      return ketqua;
+  }
+  function bai1() {
+      let a = Number(prompt("Nhập một số tính bình phương"));
+      let ketqua = binhphuong(a);
+      document.write("Bình phương của "+a+" = "+ketqua)
+  }
+
+</script>
+</body>
+</html>

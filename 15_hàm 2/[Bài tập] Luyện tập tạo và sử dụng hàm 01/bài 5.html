@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function array(star){
+    let array1 =["Polaris","Aldebaran","Deneb", "Vega","Altair","Dubhe", "Regulus"];
+    let array2 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major","Leo"];
+    for (let i=0;i<array1.length;i++){
+            if (star===array1[i]){
+                return array2[i]
+            }
+      }
+      return ""
+    }
+    let input = prompt("Nhập tên ngôi sao");
+    let star = array(input);
+    if(star === ""){
+        document.write("Không có tên ngôi sao nào")
+    }else {
+        document.write("Tên ngôi sao tương ứng của "+input+" là "+star)
+    }
+</script>
+</body>
+</html>
