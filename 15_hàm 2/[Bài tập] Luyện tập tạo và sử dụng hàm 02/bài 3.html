@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính giải thừa</title>
+</head>
+<p onclick="bai3()">Bài 3:tính giai thừa</p>
+<body>
+<script>
+    function giaiThua(so) {
+    let giai_thua = 1;
+    if(so>=1){
+        for (let i=1; i<=so; i++){
+            giai_thua = giai_thua * i
+        }
+    }else if(so === 0 ){
+        giai_thua =  1
+    }else{
+        return "Giai thừa không xác định được"
+    }
+    return giai_thua
+}
+    function bai3(){
+    let so =parseInt(prompt("nhập sô bất kì"));
+    let giaithua = giaiThua(so);
+    document.write("giai thừa của"+so+"="+giaithua);
+    }
+
+</script>
+</body>
+</html>

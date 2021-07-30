@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tìm</title>
+</head>
+<body>
+<p onclick="bai6()">Bài 6:Kiểm tra phải là số nguyên dương hay không</p>
+<script>
+    function kiemtra(i) {
+        if (i>0){
+            return true
+        }else {
+            return false
+        }
+    }
+    function bai6() {
+        let i = parseInt(prompt("nhập vào 1 số bất kì"));
+        let kt =kiemtra(i);
+        if (kt === true){
+            alert("đây là số nguyên dương")
+        }else {
+            alert("đây không phải là số nguyên dương")
+        }
+
+    }
+</script>
+</body>
+</html>

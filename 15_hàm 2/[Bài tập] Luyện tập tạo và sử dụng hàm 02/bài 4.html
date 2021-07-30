@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiểm tra kí tự </title>
+</head>
+<body>
+<p onclick="sohaychuoi()">bài 4:Kiểm tra kí tự là số hay chuỗi</p>
+<script>
+    function kiemtra(i) {
+        if (i%2===0||i%1===0){
+            return true
+        }else {
+            return false
+        }
+    }
+    function sohaychuoi() {
+        let i = parseInt(prompt("input"));
+        let check= kiemtra(i);
+        if (check ){
+            alert("đây là số")
+        }else {
+            alert("đây là chuỗi")
+        }
+
+    }
+</script>
+</body>
+</html>

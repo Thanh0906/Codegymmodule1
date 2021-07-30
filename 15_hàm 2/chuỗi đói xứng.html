@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" onclick="isPalindrome()" value="Clickme">
+<script>
+    function isPalindrome() {
+        let array = prompt("nhập 1 chuỗi");
+        let array1 = array.split("");
+        let check;
+        let j =array1.length-1;
+        for (let i =0;i<array1.length;i++){
+            if ( array1 [i]=== array1[j]){
+                j--;
+                check=true;
+                break;
+            }else {
+                check= false;
+                break;
+            }
+        }
+        if (check === true ){
+            alert("đây là chuỗi đối xứng")
+        }else {
+            alert("đây không phải là chuối đối xứng")
+        }
+    }
+
+</script>
+</body>
+</html>

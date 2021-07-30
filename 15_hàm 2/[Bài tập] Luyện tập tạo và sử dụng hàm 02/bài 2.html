@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính diện tích chu vi hình tròn</title>
+</head>
+<body>
+<input type="button" value="Bài 2" onclick="bai2()"> Tính diện tích,chu vi hình tròn <br>
+<script>
+    function s(r) {
+        let dientich = 3.14*r*r;
+        return dientich;
+    }
+    function c(r) {
+        let chuvi = 2*r*3.14;
+        return chuvi;
+    }
+    function bai2() {
+        let r = parseInt(prompt("nhập bán kính r của hình tròn"));
+        let dientich = s(r);
+        let chuvi = c(r);
+        document.write("chu vi của hình tròn có bán kính" +r+ "là" +chuvi+ "<br>");
+        document.write("diện tích của hình tròn có bán kính" +r+ "là" +dientich);
+   }
+</script>
+</body>
+</html>

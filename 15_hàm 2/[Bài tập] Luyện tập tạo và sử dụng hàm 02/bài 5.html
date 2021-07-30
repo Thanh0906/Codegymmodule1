@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>trả về số nguyên nhỏ nhất</title>
+</head>
+<p onclick="number()">Bài 5:Tìm số nguyên nhỏ nhất trong 3 số bát kì</p>
+<body>
+<script>
+    function timso(array) {
+        let min;
+        for (i=0;i<array.length;i++){
+            min = array[0];
+        if (array[i]<min){
+            min =array[i]
+        }
+      }
+        return min
+    }
+    function number() {
+        let array = [];
+        for (let i =0;i<3;i++){
+            array.push(parseInt(prompt("nhập vào mảng số thứ"+i)))
+        }
+        let min =timso(array);
+        document.write("số nhỏ nhất trong 3 số là" +min)
+
+    }
+</script>
+</body>
+</html>
