@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    class Temperature{
+        constructor() {
+        this.tempC = nhietdo;
+        this.gettempC = function () {
+            return this.tempC};
+        this.getCtoF = function () {
+            return this.tempC * 1.8 + 32
+        };
+        this.getCtoK = function () {
+            return this.tempC + 273
+        }
+     }
+    }
+    let nhietdo = parseInt(prompt("nhập nhiệt độ muốn đổi"));
+    let temp = new Temperature(nhietdo);
+    let doc =temp.gettempC();
+    let dof= temp.getCtoF();
+    let dok =temp.getCtoK();
+   alert("nhiệt độ" +doc+ " *C =" +dof+ "*F và =" +dok+ "*K")
+</script>
+</body>
+</html>

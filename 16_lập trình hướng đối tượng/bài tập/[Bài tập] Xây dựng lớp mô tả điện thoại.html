@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Mobile{
+        constructor(pin, status) {
+            this.pin = pin;
+            this.status = status;
+            this.inboxMessage = [];
+            this.sentMessage = [];
+        }
+        isOnOfMobile() {
+            if (this.status) {
+                alert("Điện thoại đang bật");
+                return this.status;
+            } else {
+                alert("ĐIện thoai đang tắt.");
+                return this.status;
+            }
+        }
+        setOnOfMobile() {
+            if (this.status) {
+                this.status = false;
+                alert("Đã tắt điện thoại");
+            } else {
+                this.status = true;
+                alert("Đã bật điện thoại");
+            }
+        }
+        sendMessage(message, mobile) {
+            if (this.isOnOfMobile()){
+                this.sentMessage.push(message);
+                mobile.receiveMessage(message);
+                this.setPin();
+            } else {
+                alert("Điện thoại đang tắt nên không xài được!");
+            }
+        }
+
+        receiveMessage(message) {
+            this.inboxMessage.push(message);
+        }
+
+        setPin() {
+            this.pin--;
+        }
+
+        getPin(){
+            return this.pin;
+        }
+
+        updatePin(){
+            this.pin =100;
+        }
+
+    }
+    let samsung = new Mobile(100, true);
+    let iphone = new Mobile(100, true);
+    samsung.setOnOfMobile();
+    samsung.sendMessage("Alo iphone", iphone);
+    samsung.sendMessage("Alo iphoneX", iphone);
+    samsung.sendMessage("Alo iphone11", iphone);
+    iphone.sendMessage("Hi Samsung", samsung);
+    console.log(samsung.inboxMessage);
+    console.log(iphone.inboxMessage);
+    console.log(samsung.getPin());
+    console.log(iphone.getPin());
+</script>
+</body>
+</html>
