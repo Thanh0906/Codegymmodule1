@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = ["aaa", "", "abc", "a", "zz"];
+    let arr1 = [];
+    let temp;
+    for (let i = 0; i < arr.length; i++){
+        for (let j = i + 1; j < arr.length; j++) {
+            if (arr[i].length > arr[j].length) {
+                temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+        console.log(arr1.push(arr[i]))
+    }
+    console.log(arr1)
+</script>
+</body>
+</html>

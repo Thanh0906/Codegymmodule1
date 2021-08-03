@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let goimon;
+    let thanhtien = 0;
+    do {
+        goimon = parseInt(prompt("Hãy gọi đồ uống bằng cách bấm số: "));
+        switch (goimon) {
+            case 1:
+                alert("Bạn đã chọn Cafe,có giá là: 20000 VND");
+                let soluong1 = parseInt(prompt("Hãy chọn số lượng: "));
+              thanhtien += (20000*soluong1);
+                break;
+            case 2:
+                alert("Bạn đã chọn Nước cam vắt,có giá là: 35000 VND");
+                let soluong2 = parseInt(prompt("Hãy chọn số lượng: "));
+                thanhtien += (20000*soluong2);
+                break;
+            case 3:
+                alert("Bạn đã chọn Nước ép cà rốt,có giá là: 40000 VND");
+               let soluong3 = parseInt(prompt("Hãy chọn số lượng: "));
+                thanhtien += (25000*soluong3);
+                break;
+            case 4:
+                alert("Bạn đã chọn Nước ép cà chua,cón giá là: 40000 VND");
+                let soluong4 = parseInt(prompt("Hãy chọn số lượng: "));
+                thanhtien += (25000*soluong4);
+                break;
+            case 5:
+                alert("Bạn đã chọn Nước lọc,có giá là: 10000 VND");
+                let soluong5 = parseInt(prompt("Hãy chọn số lượng: "));
+                thanhtien += (10000*soluong5);
+                break;
+            case 6:
+                alert("Bạn đã chọn Nước dừa,có giá là: 30000 VND");
+                let soluong6 = parseInt(prompt("Hãy chọn số lượng: "));
+                thanhtien += (30000*soluong6);
+                break;
+            case 7:
+                alert("Tổng cộng số tiền bạn phải thanh toán là: " + thanhtien+ " VND");
+                alert("Cảm ơn bạn đã chọn món. Hẹn gặp lại!!!");
+                break;
+            default:
+                alert("Vui lòng nhập số từ 1 đến 7")
+        }
+    } while (goimon !== 7);
+</script>
+</body>
+</html>

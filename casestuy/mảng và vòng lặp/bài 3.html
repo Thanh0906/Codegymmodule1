@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array=[2,3,5,4];
+    let array1=[4,5,6,2];
+    let max = array[0]/array1[0];
+    let index;
+    for (let i=0;i<array.length;i++){
+        if (max<array[i]/array1[i]){
+            max=array[i]/array1[i];
+            index=i;
+        }
+    }
+    document.write(max + " là phân số lớn nhất, có chỉ số index là: " + index);
+</script>
+</body>
+</html>

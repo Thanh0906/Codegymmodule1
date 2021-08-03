@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+   let A = [1,3,5,0,5,7,8];
+   let B=[];
+   let number = prompt("nhập vào 1 số");
+   let k=prompt("nhập vị trí mà bạn muốn chèn");
+   for (let i=0;i<k;i++){
+       B.push(A[i])
+   }
+   B.push(number);
+   for(let j=k;j<A.length;j++){
+       B.push(A[j])
+   }
+   console.log(B);
+</script>
+
+</body>
+</html>

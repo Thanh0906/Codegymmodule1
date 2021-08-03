@@ -6,7 +6,15 @@
 </head>
 <body>
 <script>
-
+   let array = [1,2,3,4,5];
+   let array1 =[];
+   for (let i=0;i<array.length;i++){
+       if (i===0){
+           array1[0]=array[0]
+       }else {
+           array1[i] = array1 [i-1]+ array[i]
+       }
+   } document.write(array1.join(" "))
 </script>
 </body>
 </html>

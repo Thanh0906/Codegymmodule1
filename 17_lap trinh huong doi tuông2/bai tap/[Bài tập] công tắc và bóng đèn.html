@@ -7,67 +7,44 @@
 <body>
 <script>
     class ElectricLamp {
-        constructor() {
-            this.status = false;
-            this.turnOn = function () {
-                this.status = true;
-                return this.status
-            };
-
-            this.turnOff = function () {
-                this.status = false;
-                return this.status
-            }
+        constructor(status) {
+            this.status = status;
         }
-    }
-    class SwitchButton{
-        constructor() {
-        this.connectToLamp = function (electric) {
-        this.electric = electric;
-            if (this.status === true && this.electric === true){
-                document.write("Đã bật điện và đèn sáng<br>");
-                console.log("Chưa bật công tắc đèn<br>")
-            }else if(this.status === false && this.electric === true){
-                document.write("Chưa cắm ổ điện<br>");
-                console.log("Chưa bật công tắc đèn<br>")
-            }else if(this.status === true && this.electric === false){
-                document.write("Chưa bật công tắc đèn<br>");
-                console.log("Chưa bật công tắc đèn<br>")
-            }else{
-                document.write("Chưa bật công tắc đèn và cắm điện<br>");
-                console.log("Chưa bật công tắc đèn và cắm điện<br>")
-            }
-        };
-        this.switchOff = function () {
+        turnOff () {
             this.status = false;
-            return this.status
-        };
-        this.switchOn = function () {
+            alert("Đèn đang tắt");
+        }
+        turnOn () {
             this.status = true;
-            return this.status
+            alert("Đèn đang bật");
         }
     }
+    class SwitchButton {
+        constructor(status) {
+            this.status = status;
+        }
+        connectToLamp (ElectricLamp) {
+            if (this.status) {
+                ElectricLamp.turnOn();
+            } else {
+                ElectricLamp.turnOff();
+            }
+        }
+        switchOff () {
+            return this.status = false;
+        }
+        switchOn () {
+            return this.status = true;
+        }
     }
-    let den = new ElectricLamp();
-    let bat_tat = den.turnOn();
-    let dien = new SwitchButton();
-    dien.switchOn();
-
-    dien.connectToLamp(bat_tat);
-    bat_tat = den.turnOff();
-
-    dien.switchOn();
-    dien.connectToLamp(bat_tat);
-
-    bat_tat = den.turnOff();
-    dien.switchOff();
-    dien.connectToLamp(bat_tat);
-
-    bat_tat = den.turnOn();
-    dien.switchOff();
-    dien.connectToLamp(bat_tat)
-
-
+    let electric_lamp = new ElectricLamp(false);
+    let switch_button = new SwitchButton(false);
+    for (let i = 0; i < 5; i++) {
+        switch_button.switchOn();
+        switch_button.connectToLamp(electric_lamp);
+        switch_button.switchOff();
+        switch_button.connectToLamp(electric_lamp);
+    }
 
 
 </script>

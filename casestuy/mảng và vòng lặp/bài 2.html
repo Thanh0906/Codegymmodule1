@@ -9,13 +9,17 @@
    let  A =[7,2,5,3,5,3];
    let B =[7,2,5,4,6,3,5,3];
    let C =[];
-   for (let i = 0;i<A.length;i++){
-       for (let j=0;j<B.length;j++){
-           if (A[i]===B[j]){
-               C.push()
-           }
+   for (let i=0;i<B.length;i++){
+  if (B[i]!== A[i]&& B[i+1]===A[i]){
+          let c = B.splice(i,1);
+           C.push(c)
        }
    }
+   C.sort(function (a,b) {
+  return a -b
+  });
+    document.write("nhung phan tu xuat hien trong b nhung khong suat hien trong A la "+C.join(""))
+
 </script>
 </body>
 </html>
