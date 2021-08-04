@@ -5,23 +5,48 @@
     <title>Title</title>
 </head>
 <body>
+<canvas id="myCanvas" width="1368px" height="768px" style="border:1px solid #d3d3d3;"></canvas>
 <script>
   class Rectangle{
-      constructor(chieudai,chieurong) {
-          this.chieudai=chieudai;
-          this.chieurong=chieurong;
-          this.getchuvi= function () {
-              return (this.chieudai+ this.chieurong)*2
-          };
-          this.getdientich=function () {
-              return this.chieurong*this.chieudai
-          }
+      constructor(width,height) {
+          this.width=width;
+          this.height=height;
+      }
+      getWidth(){
+          return this.width
+      }
+      getHeight(){
+          return this.height
+      }
+      setWidth (){
+          this.width=width
+      }
+      setHeight(){
+          this.height=height
+      }
+      getchuvi () {
+          return this.width * this.height;
+      }
+      getdientich () {
+          return 2 * (this.width + this.height)
       }
   }
-  let hcn = new Rectangle(10,15);
-  let dientich =hcn.getdientich();
-  let chuvi =hcn.getchuvi();
-  alert("chuvi: " + chuvi + "; diện tích: " + dientich);
+  Rectangle.prototype.display = function () {
+      let ctx = document.getElementById("myCanvas").getContext("2d");
+      ctx.rect(10, 10, this.width, this.height);
+      ctx.stroke();
+  };
+  let rectangle = new Rectangle(10, 5);
+  let width = rectangle.getWidth();
+  let height = rectangle.getHeight();
+  let chuvi = rectangle.getchuvi();
+  let dientich = rectangle.getdientich();
+  alert("Hình chữ nhật có chiều dài là: " + width + " và chiều rộng là: " + height + " thì có diện tích là: " + dientich + " và chu vi là: " + chuvi);
+  function createRectangle () {
+      let rectangle = new Rectangle(100, 60);
+      rectangle.display();
+  }
+  createRectangle ();
 </script>
 </body>
 </html>

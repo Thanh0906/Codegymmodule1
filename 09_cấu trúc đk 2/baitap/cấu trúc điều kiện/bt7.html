@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let sophut=parseInt(prompt("nhập số phút gọi của gia đình ban"));
+
+    let money=0;
+    if (sophut>300){
+        money=sophut*2.5;
+        alert("số tiền bạn phải trả là"+money+"nghìn đông")
+    }else if (sophut>200){
+        money=sophut*2;
+        alert("số tiền bạn phải trả là"+money+"nghìn đông")
+    }else if (sophut>100){
+        money=sophut*1.6;
+        alert("số tiền bạn phải trả là"+money+"nghìn đông")
+    }else {
+        money=sophut*1.3;
+        alert("số tiền bạn phải trả là "+money+"nghìn đông")
+    }
+</script>
+</body>
+</html>
