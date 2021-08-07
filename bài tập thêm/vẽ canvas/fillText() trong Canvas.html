@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vẽ đỗ màu</title>
+</head>
+<body>
+
+</body><canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">Trình duyệt của bạn không hỗ trợ thẻ canvas trong HTML5.</canvas>
+<p>Phương thức fillText() sử dụng để vẽ chữ đã được đổ màu trong canvas. Mặc định là màu đen.</p>
+<script>
+
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");//kiểu vẽ
+    ctx.font = "20px Georgia";//font chữ
+    ctx.fillText("Xin chào!", 10, 50);
+
+    ctx.font = "30px Verdana";
+    // Tạo dải màu
+    var gradient = ctx.createLinearGradient(0, 0, c.width, 0);
+    gradient.addColorStop("0", "magenta");
+    gradient.addColorStop("0.5", "blue");
+    gradient.addColorStop("1.0", "red");
+    // Đổ dải màu lên chữ
+    ctx.fillStyle = gradient;
+    ctx.fillText("Cười tươi nào!", 10, 90);
+
+</script>
+</html>

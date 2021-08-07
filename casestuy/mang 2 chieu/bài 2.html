@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 2</title>
+</head>
+<body>
+<script>
+    let n=prompt("Nhập vào chiều dài của mảng");
+    let m=prompt("Nhập vào chiều rộng của mảng");
+    let count=0;
+    let array = [[]];
+    for(let i=0;i<n;i++){
+        array[i]= [];
+        for (var j=0;j<m;j++){
+            array[i][j]=parseInt(prompt("Nhập vào phần tử thứ: "+j+" của mảng: "+(i+1)));
+            if(check(array[i][j])){
+                count++;
+            }
+        }
+    }
+    function check(so) {
+        let check = true;
+        for (let i = 2; i < so; i++) {
+            if (so % i ===0 ) {
+                check = false;
+                break;
+            }
+        }
+        return check
+    }
+    let songuyento= [];
+    for (let i = 0; i < array.length; i++) {
+        for (let j = 0; j < array[i].length; j++) {
+            if (check(array[i][j])) {
+                songuyento.push(array[i][j]);
+            }
+        }
+    }
+
+    document.write("Số nguyên tố trong mảng 2 chiều này là: " + songuyento.join(",") + "<br>");
+    document.write("Có tất cả " + songuyento.length + " số nguyên tố trong mảng 2 chiều này");
+</script>
+</body>
+</html>

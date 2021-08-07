@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 1</title>
+</head>
+<body>
+<script>
+    let m = prompt("Nhập vào chiều dài mảng");
+    let  n = prompt("Nhập vào chiều rộng mảng");
+    let sum = 0;
+    let  array = [[]];
+    for(let i = 0; i < m; ++i) {
+        array[i] = [];
+        for(let j = 0; j< n; ++j)
+        {
+            array[i][j] = parseInt(prompt("Nhập vào phần tử thứ: "+j+" của mảng thứ "+(i+1)));
+            if(array[i][j]%2===0){
+                sum=i+array[i][j];
+            }
+        }
+    }
+    document.write(arr+"<br>");
+    document.write("Tổng của các phần tử chia hết cho 2 trong mảng là:  " +sum);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;"></canvas>
+
+<script>
+
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    ctx.lineWidth = "10";//cỡ nét vẽ
+    ctx.strokeStyle = "red";//màu nét vẽ
+    ctx.rect(75, 25, 150, 100);
+    //75,25 tọa độ x,y góc trái phía trên cảu hình chữ nhật
+    //150,100 chiều dài và chiều cao hình chữ nhật
+
+    ctx.stroke();
+
+</script>
+</body>
+</html>

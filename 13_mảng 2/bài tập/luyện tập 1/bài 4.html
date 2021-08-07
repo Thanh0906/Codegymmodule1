@@ -8,10 +8,20 @@
 <script>
   let mangso = [];
   for(let i=0 ;i<5; i++){
-      mangso[i] = parseInt(prompt("Nhập số vào mảng"));
+      mangso[i] = parseInt(prompt("Nhập phần tử vào mảng tại vị trí"+i));
   }
-  document.write("mảng số là ["+mangso+"]<br>");
-  document.write("mảng số ngược là ["+mangso.reverse()+"]<br>")
+ // document.write("mảng số là ["+mangso+"]<br>");
+//  document.write("mảng số ngược là ["+mangso.reverse()+"]<br>")
+  let k=0;
+  let m=mangso.length-1;
+  while (k<m){
+      let n=mangso[k];
+      mangso[k]=mangso[m];
+      mangso[m]=n;
+      k++;
+      m--;
+  }document.write(mangso)
+
 
 </script>
 </body>
