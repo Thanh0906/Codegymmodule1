@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let string = prompt('Nhập một xâu kí tự: ');
+    let arr = string.split('');
+    let arr1 = [];
+    function transfer() {
+        arr1.push(arr[0].toLocaleUpperCase());
+        for (let i = 1; i < arr.length; i++) {
+            if (arr[i - 1] === ' ') {
+                arr1.push(arr[i].toLocaleUpperCase());
+            } else {
+                arr1.push(arr[i].toLocaleLowerCase());
+            }
+        }
+    }
+    transfer();
+    let newString = arr1.join("");
+    document.write("</br>");
+    document.write("Xâu sau khi chuẩn hóa là : " + newString);
+    let arr2 = arr1.join('').split(' ');
+    let max = arr2[0];
+    let stringMax = arr2[0];
+    function chuoidainhat() {
+        for (let i = 1; i < arr2.length; i++) {
+            if (max < arr2[i]) {
+                max = arr2[i];
+                stringMax = arr2[i];
+            }
+        }
+    }
+    chuoidainhat();
+    document.write("</br>");
+    document.write("Chuỗi có độ dài lớn nhất là:" + stringMax);
+
+
+</script>
+
+</body>
+</html>

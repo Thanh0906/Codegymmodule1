@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .so{
+            width: 50px;
+            height: 50px;
+            text-align: center;
+        }
+        .mot{
+            width: 100px;
+            height: 20px;
+            text-align: center;
+
+        }
+        .hang1{
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+<h1 class="hang1">sô xố vietlot</h1>
+<div class="hang1">
+    <label>
+        <input type="text" placeholder="00-99" class="so">
+    </label>
+    <label>
+        <input type="text" placeholder="00-99" class="so">
+    </label>
+    <label>
+        <input type="text" placeholder="00-99" class="so">
+    </label>
+    <label>
+        <input type="text" placeholder="00-99" class="so">
+    </label>
+    <label>
+        <input type="text" placeholder="00-99" class="so">
+    </label>
+    <label>
+        <input type="text" placeholder="00-99" class="so">
+    </label>
+</div>
+<br>
+<br>
+<br>
+<div class="hang1">
+    <label>
+        <input type="button" value="Vé Tự chọn" class="mot" id="input" onclick="tuchon()">
+    </label>
+    <label>
+        <input type="button" value="Vé Ngẫu nhiên" class="mot" id="input1" onclick="veso.chonsongaunhien()">
+    </label>
+    <p id="vedamua" class="hang1"></p>
+</div>
+<br>
+<br><br>
+<div class="hang1">
+    <label> <input type="text" class="so">
+    </label>
+    <label>
+        <input type="text" class="so">
+    </label>
+    <label>
+        <input type="text" class="so">
+    </label>
+    <label>
+        <input type="text" class="so">
+    </label>
+    <label>
+        <input type="text" class="so">
+    </label>
+    <label>
+        <input type="text" class="so">
+    </label>
+</div>
+<br>
+<br>
+<br>
+<div class="hang1">
+    <label>
+        <input type="button" value="Quay số" id="input2" onclick="quaySo();checkResult()">
+    </label>
+</div>
+<script>
+    class VeSo {
+        constructor() {
+            this.number = [];
+        }
+        tuchon() {
+            if (this.number.length < 24){
+                let inputs=document.getElementsByTagName("input");
+                for(let i=0;i<6;i++){
+                    let ve=inputs[i].value;
+                    this.number.push(ve);
+                }
+                displayvedamua();
+            }
+            else{
+                alert("Bạn đã mua đủ 4 vé !")
+            }
+        }
+       chonsongaunhien() {
+            if (this.number.length < 24) {
+                let ve = "";
+                for (let i = 1; i <= 6; i++) {
+                    let so = Math.floor(Math.random() * 100);
+                    this.number.push(so);
+                    ve += so;
+                }
+                displayvedamua();
+            } else {
+                alert("Bạn đã mua đủ 4 vé !")
+            }
+
+        }
+    }
+
+    let veso = new VeSo();
+    let a = veso.number;
+
+    function displayvedamua() {
+        let table = "<table border='1'>" +
+            "<tr><th>Vé đã Mua</th></tr>";
+        for (let i = 0; i <veso.number.length; i++) {
+            if(i===6||i===12||i===18)
+            {
+                table = table +"<tr><th>Vé đã Mua</th></tr>"+ "<tr>" +
+                    "<td>" + veso.number[i] + "</td>" +
+                    "</tr>"
+            }
+            else {
+                table = table + "<tr>" +
+                    "<td>" + veso.number[i] + "</td>" +
+                    "</tr>"
+            }
+        }
+        document.getElementById("vedamua").innerHTML = table + "</table>";
+    }
+    function quaySo() {
+        let inputs=document.getElementsByTagName("input");
+        for(let i=8;i<=13;i++){
+            let so = Math.floor(Math.random() * 100);
+            inputs[i].value= so;
+        }
+
+    }
+    function checkResult() {
+        let ketqua=[];
+        let inputs = document.getElementsByTagName("input");
+        for (let i = 8; i <= 13; i++) {
+            let ve = inputs[i].value;
+            ketqua.push(ve);
+        }
+        let count=0;
+        for(let i=0;i<ketqua;i++){
+                count++;
+        }
+        switch (count) {
+
+            case 1:
+                alert("Bạn đã trúng giải đặc biệt 1 tỉ $");
+                break;
+            case 2:
+                alert("Bạn đã trúng giải nhất 1 triệu $");
+                break;
+            case 3:
+            case 4:
+                alert("Bạn đã trúng giải khuyến khích 1000$");
+                break;
+            default:
+                alert("Chúc bạn may mắn lần sau");
+        }
+
+    }
+
+
+</script>
+</body>
+</html>

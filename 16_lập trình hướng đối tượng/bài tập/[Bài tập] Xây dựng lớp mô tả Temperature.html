@@ -10,16 +10,16 @@
     class Temperature{
         constructor() {
         this.tempC = nhietdo;
-            this.gettempC = function () {
-                return this.tempC
-            };
-            this.getCtoF = function () {
-                return this.tempC * 1.8 + 32
-            };
-            this.getCtoK = function () {
-                return this.tempC + 273
         }
-     }
+        gettempC ()  {
+        return this.tempC;
+         }
+         getCtoF() {
+        return this.tempC * 1.8 + 32
+         }
+         getCtoK  () {
+         return this.tempC + 273
+         }
     }
     let nhietdo = parseInt(prompt("nhập nhiệt độ muốn đổi"));
     let temp = new Temperature(nhietdo);
