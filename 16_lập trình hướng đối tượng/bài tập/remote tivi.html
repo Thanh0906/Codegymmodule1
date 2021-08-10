@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Tivi {
+        constructor(kenh, amLuong, tinhTrang) {
+            this.kenh = kenh;
+            this.amLuong = amLuong;
+            this.tinhTrang = tinhTrang;
+        }
+
+        displayTivi() {
+            if (this.tinhTrang) {
+                alert("Kênh hiện tại là: " + this.kenh);
+                alert("Âm lượng hiện tại là: " + this.amLuong)
+            } else {
+                alert("Tivi đang tắt!!!")
+            }
+        }
+
+    }
+
+    class Remote {
+        constructor(tivi) {
+            this.tivi = tivi;
+        }
+
+        chuyenKenh() {
+            let kenh = parseInt(prompt("Nhập kênh số kênh muốn chuyển: "));
+            this.tivi.kenh = kenh;
+        }
+
+        tangAmLuong() {
+            this.tivi.amLuong++;
+        }
+
+        giamAmLuong() {
+            this.tivi.amLuong--;
+        }
+
+        batTatTivi() {
+            console.log(this.tivi.tinhTrang);
+            this.tivi.tinhTrang = !this.tivi.tinhTrang;
+        }
+    }
+
+    tiviSamSung = new Tivi(1, 10, false);
+    remoteSamSung = new Remote(tiviSamSung);
+    while (true) {
+        let choice = parseInt(prompt("Bạn muốn sử dụng chức năng nào của tivi: \n" +
+        "1. Bật tắt tivi \n" +
+        "2. Tăng âm lượng \n" +
+        "3. Chuyển kênh"));
+        switch (choice) {
+            case 1:
+                remoteSamSung.batTatTivi();
+                remoteSamSung.tivi.displayTivi();
+                break;
+            case 2:
+                remoteSamSung.tangAmLuong();
+                remoteSamSung.tivi.displayTivi();
+                break;
+            case 3:
+                remoteSamSung.chuyenKenh();
+                remoteSamSung.tivi.displayTivi();
+                break;
+            default:
+                remoteSamSung.tivi.displayTivi();
+
+        }
+    }
+</script>
+</body>
+</html>
